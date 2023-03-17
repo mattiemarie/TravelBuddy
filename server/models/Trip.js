@@ -26,7 +26,7 @@ const tripSchema = new Schema(
             required: true,
         },
         guests: {
-            type: String,
+            type: Number,
             required: true,
         },
     }
