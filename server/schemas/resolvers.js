@@ -32,5 +32,18 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
+        saveTrip: async (parent, { trip }, context) => {
+            if (context.user) {
+                const updatedUser = await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: {savedTrips: trip} },
+                    { new: true }
+                )
+                return updatedUser;
+            }
+            throw new AuthenticationError('You need to be logged in!')
+        },
     }
 };
+
+module.exports = resolvers;
