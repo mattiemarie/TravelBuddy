@@ -1,5 +1,5 @@
 {
-    "name": "trave-buddy",
+    "name": "travel-buddy",
     "version": "1.0.0",
     "description": "",
     "main": "server/server.js",
@@ -19,8 +19,16 @@
     "license": "ISC",
     "dependencies": {
         "@apollo/react-hooks": "^4.0.0",
+        "@emotion/react": "^11.10.6",
+        "@emotion/styled": "^11.10.6",
+        "@fontsource/roboto": "^4.5.8",
+        "@mui/icons-material": "^5.11.11",
+        "@mui/material": "^5.11.13",
+        "@mui/styled-engine-sc": "^5.11.11",
         "apollo-server-express": "^2.19.2",
-        "if-env": "^1.0.4"
+        "if-env": "^1.0.4",
+        "react-router-dom": "^6.9.0",
+        "styled-components": "^5.3.9"
     },
     "devDependencies": {
         "concurrently": "^5.2.0"
