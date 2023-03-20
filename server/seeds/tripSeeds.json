@@ -1,0 +1,19 @@
+[
+    {
+      "fromlocation": "Los Angelas",
+      "tolocation": "Orlando",
+      "startdate": "2022-05-02",
+      "enddate": "2022-05-06", 
+      "budget": 2100.00,
+      "guests": 4
+    },
+    {
+      "fromlocation": "New Jersey",
+      "tolocation": "Atlanta",
+      "startdate": "2022-07-21",
+      "enddate": "2022-07-29", 
+      "budget": 3500.00,
+      "guests": 2
+    }
+  ]
+  
