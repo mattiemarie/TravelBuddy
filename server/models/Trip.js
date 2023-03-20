@@ -3,6 +3,11 @@ const { Schema, model } = require('mongoose');
 //Schema to create User Model
 const tripSchema = new Schema(
     {
+        title: {
+            type: String,
+            required: true,
+            trim: true,
+        },
         fromlocation: {
             type: String,
             required: true,
@@ -21,11 +26,25 @@ const tripSchema = new Schema(
             type: Date,
             required: true,
         },
+        flight: {
+            type: String,
+            required: true,
+            trim: true,
+        },
+        hotel: {
+            type: String,
+            required: true,
+            trim: true,
+        },
+        guests: {
+            type: Number,
+            required: true,
+        },
         budget: {
             type: Number,
             required: true,
         },
-        guests: {
+        tripcost: {
             type: Number,
             required: true,
         },

@@ -1,0 +1,25 @@
+[
+    {
+      "title": "LA to Orlando",
+      "fromlocation": "Los Angelas",
+      "tolocation": "Orlando",
+      "startdate": "2022-05-02",
+      "enddate": "2022-05-06",
+      "flight": "American Airlines",
+      "hotel": "",
+      "guests": 4,
+      "budget": 2100.00,
+      "tripcost":1800.00
+    },
+    {
+      "title": "New Jersey to Atlanta",
+      "fromlocation": "New Jersey",
+      "tolocation": "Atlanta",
+      "startdate": "2022-07-21",
+      "enddate": "2022-07-29",
+      "flight" : "Southwest",
+      "budget": 1500.00,
+      "guests": 2
+    }
+  ]
+  
