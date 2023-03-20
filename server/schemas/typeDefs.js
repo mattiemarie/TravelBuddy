@@ -10,6 +10,7 @@ const typeDefs = gql`
         tolocation: String
         airline: String
         hotel: String
+        guests: Number
         budget: Number
         tripcost: Number
     }
