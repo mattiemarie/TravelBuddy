@@ -21,6 +21,7 @@ const tripSchema = new Schema(
             type: Date,
             required: true,
         },
+        
         budget: {
             type: Number,
             required: true,
