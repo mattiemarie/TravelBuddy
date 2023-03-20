@@ -5,10 +5,12 @@ const typeDefs = gql`
     type Trip {
         _id: ID
         title: String
-        travelers: [User]
+        traveler: [User]
         fromlocation: String
         tolocation: String
-        airline: String
+        startdate: String
+        enddate: String
+        flight: String
         hotel: String
         guests: Number
         budget: Number
@@ -32,7 +34,7 @@ const typeDefs = gql`
         Name: String
         City: String
         Hotel: String
-        Airplane: String
+        Flight: String
         Budget: Number
     }
     type Mutation {
