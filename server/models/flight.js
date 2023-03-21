@@ -1,43 +1,40 @@
 const { Schema, model } = require('mongoose');
 
-//Schema to create Trip Model
-const tripSchema = new Schema(
+//Schema to create Flight Model
+const flightSchema = new Schema(
     {
-        title: {
+        airline: {
             type: String,
             required: true,
             trim: true,
         },
-        location: {
+        airportfrom: {
             type: String,
             required: true,
             trim: true,
         },
-        startdate: {
+        airportto: {
             type: String,
             required: true,
             trim: true,
         },
-        enddate: {
+        departuredate: {
             type: String,
             required: true,
             trim: true,
         },
-        guests: {
-            type: Number,
+        arrivaldate: {
+            type: String,
             required: true,
+            trim: true,
         },
-        budget: {
-            type: Number,
-            required: true,
-        },
-        tripcost: {
+        flightcost: {
             type: Number,
             required: true,
         },
     }
 )
 
-const Trip = model('trip', tripSchema);
+const Flight = model('flight', flightSchema);
 
-module.exports = Trip;
+module.exports = Flight;

@@ -1,25 +1,25 @@
 [
     {
-      "title": "LA to Orlando",
-      "fromlocation": "Los Angelas",
-      "tolocation": "Orlando",
-      "startdate": "2022-05-02",
-      "enddate": "2022-05-06",
-      "flight": "American Airlines",
-      "hotel": "",
+      "title": "West Coast Trip",
+      "location": "Los Angelas",
       "guests": 4,
+      "startdate": "2022-05-01",
+      "enddate": "2022-05-06",
+      "airline":"American Airlines",
+      "hotel": "",
       "budget": 2100.00,
-      "tripcost":1800.00
+      "tripcost":1825.49
     },
     {
-      "title": "New Jersey to Atlanta",
-      "fromlocation": "New Jersey",
-      "tolocation": "Atlanta",
-      "startdate": "2022-07-21",
-      "enddate": "2022-07-29",
-      "flight" : "Southwest",
+      "title": "East Coast Trip",
+      "location": "New Jersey",
+      "guests": 2,
+      "startdate": "2022-06-29",
+      "enddate": "2022-07-01",
+      "airline":"Southwest",
+      "hotel": "",
       "budget": 1500.00,
-      "guests": 2
+      "tripcost":1427.82
     }
   ]
   
