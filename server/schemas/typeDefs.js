@@ -5,16 +5,16 @@ const typeDefs = gql`
     type Trip {
         _id: ID
         title: String
-        traveler: [User]
+        travelers: [User]
         fromlocation: String
         tolocation: String
         startdate: String
         enddate: String
         flight: String
         hotel: String
-        guests: Number
-        budget: Number
-        tripcost: Number
+        guests: Int
+        budget: Float
+        tripcost: Float
     }
     type User {
         _id: ID
@@ -30,12 +30,12 @@ const typeDefs = gql`
     user: User
     }
     input SavedTripInput {
-        Travelers: [User]
+        Travelers: String
         Name: String
         City: String
         Hotel: String
         Flight: String
-        Budget: Number
+        Budget: Float
     }
     type Mutation {
         login(email: String!, password: String!): Auth
