@@ -12,7 +12,7 @@ const typeDefs = gql`
         enddate: String
         flight: String
         hotel: String
-        guests: Number
+        guests: Int
         budget: Number
         tripcost: Number
     }
