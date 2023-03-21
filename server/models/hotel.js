@@ -1,43 +1,35 @@
 const { Schema, model } = require('mongoose');
 
-//Schema to create Trip Model
-const tripSchema = new Schema(
+//Schema to create Hotel Model
+const hotelSchema = new Schema(
     {
-        title: {
+        hotelname: {
             type: String,
             required: true,
             trim: true,
         },
-        location: {
+        address: {
             type: String,
             required: true,
             trim: true,
         },
-        startdate: {
+        checkin: {
             type: String,
             required: true,
             trim: true,
         },
-        enddate: {
+        checkout: {
             type: String,
             required: true,
             trim: true,
         },
-        guests: {
-            type: Number,
-            required: true,
-        },
-        budget: {
-            type: Number,
-            required: true,
-        },
-        tripcost: {
+        hotelcost: {
             type: Number,
             required: true,
         },
     }
 )
 
-const Trip = model('trip', tripSchema);
+const Hotel = model('hotel', hotelSchema);
 
-module.exports = Trip;
+module.exports = Hotel;

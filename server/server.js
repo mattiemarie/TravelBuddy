@@ -1,4 +1,6 @@
 const express = require("express");
+//cors needed for STRIPE
+const cors = require('cors')
 const path = require("path");
 //import apollo server
 const { ApolloServer } = require("apollo-server-express");
@@ -14,6 +16,11 @@ const db = require("./config/connection");
 //express server
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+//needed for STRIPE
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //apollo server
 const server = new ApolloServer({

@@ -2,12 +2,14 @@
     { "first_name": "Jason",
       "last_name": "Yarger",
       "email": "gildingthelily@hotmail.com",
-      "password": "hititboys"
+      "username":"jyarger",
+      "password": "caliboy22"
     },
     { "first_name": "Brian",
       "last_name": "Sella",
       "email": "mrgreenside23@gmail.com",
-      "password": "uhhuh"
+      "username":"bsella",
+      "password": "uhhuh234"
   
     }
   ]
