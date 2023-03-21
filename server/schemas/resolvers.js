@@ -42,8 +42,18 @@ const resolvers = {
                 return updatedUser;
             }
             throw new AuthenticationError('You need to be logged in!')
-        },
-    }
-};
+            },
+            removeTrip: async (parent, { tripId }, context) => {
+                if (context.user) {
+                    const updatedUser = await User.findOneAndUpdate(
+                        {_id: context.user._id},
+                        { $pull: { savedTrip: { tripId: tripId } } },
+                        { new: true }
+                    )
+                    return updatedUser;
+                }
+            }
+        }   
+    };
 
 module.exports = resolvers;

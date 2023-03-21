@@ -20,33 +20,39 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     context: authMiddleware,
-    });
+});
 
-  //apply apollo server with express app
-    server.applyMiddleware({ app });
-    
-    //middleware parsing
-    app.use(express.urlencoded({ extended: true }));
-    app.use(express.json());
-    
-    const _dirname = path.dirname("");
-    const buildPath = path.join(_dirname, "../client/build");
-    app.use(express.static(buildPath));
-    // if we're in production, serve client/build as static assets
-    if (process.env.NODE_ENV === "production") {
+db.once("open", () => {
+// start the server
+server.start().then(() => {
+        //apply apollo server with express app
+        server.applyMiddleware({ app });
+
+        //middleware parsing
+        app.use(express.urlencoded({ extended: true }));
+        app.use(express.json());
+
+        const _dirname = path.dirname("");
+        const buildPath = path.join(_dirname, "../client/build");
+        app.use(express.static(buildPath));
+        // if we're in production, serve client/build as static assets
+        if (process.env.NODE_ENV === "production") {
         app.use(express.static(path.join(__dirname, "../client/build")));
-    }
-    
-    // app.use(routes);
-    
-    //get all
-    app.get("*", (req, res) => {
+        }
+
+        // app.use(routes);
+
+        //get all
+        app.get("*", (req, res) => {
         res.sendFile(path.join(__dirname, "../client/build/index.html"));
-    });
-    
-    db.once("open", () => {
+        });
+
         app.listen(PORT, () => {
         console.log(`API server running on port ${PORT}!`);
-        console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+        console.log(
+            `Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`
+        );
         });
+    });
 });
+
