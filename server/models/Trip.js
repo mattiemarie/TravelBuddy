@@ -13,12 +13,12 @@ const tripSchema = new Schema(
             required: true,
             trim: true,
         },
-        startdate: {
+        startDate: {
             type: String,
             required: true,
             trim: true,
         },
-        enddate: {
+        endDate: {
             type: String,
             required: true,
             trim: true,
@@ -31,7 +31,7 @@ const tripSchema = new Schema(
             type: Number,
             required: true,
         },
-        tripcost: {
+        tripCost: {
             type: Number,
             required: true,
         },
