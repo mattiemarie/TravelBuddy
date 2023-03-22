@@ -40,4 +40,4 @@ The following link shows a demo of Travel Buddy's appearance and functionality:
 
 ## Description
 
-The goal of Group Project #3 - Travel Buddy was to create a travel booking application that allows the user to find a travel package that suits there travel needs. The user is able to input their location of travel, the number of guest they are traveling with, and their budget. Travel Buddy will then provide travel packages that fulfill their input, thus allowing the user to sift through those options and pick the one they like the best for their vacation.
+The goal of Group Project #3 - Travel Buddy was to create a travel booking application that allows the user to find a travel package that suits their travel needs. The user is able to input their location of travel, the number of guest they are traveling with, and their budget. Travel Buddy will then provide travel packages that fulfill their input, thus allowing the user to sift through those options and pick the one they like the best for their vacation.
