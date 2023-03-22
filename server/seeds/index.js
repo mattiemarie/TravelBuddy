@@ -5,15 +5,21 @@ const userSeeds = require("./userSeeds.json");
 mongoose.connect("mongodb://localhost/travelBuddy");
 
 const User = mongoose.model("User", {
-    name: String,
+    first_name: String,
+    last_name: String,
     email: String,
+    username: String,
     password: String,
 });
 
 const Trip = mongoose.model("Trip", {
-    name: String,
-    description: String,
-    price: Number,
+    title: String,
+    location: String,
+    startDate: String,
+    endDate: String,
+    guests: Number,
+    budget: Number,
+    tripCost: Number
 });
 
 async function seedData() {

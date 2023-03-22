@@ -3,12 +3,12 @@ const { Schema, model } = require('mongoose');
 //Schema to create User Model
 const userSchema = new Schema(
     {
-        firstname: {
+        first_tname: {
             type: String,
             required: true,
             max_length: 50,
         },
-        lastname: {
+        last_name: {
             type: String,
             required: true,
             max_length: 50,
