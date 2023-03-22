@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/travelBuddy', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+    // useCreateIndex: false,
+    // useFindAndModify: false
 });
 
 module.exports = mongoose.connection;
