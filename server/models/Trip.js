@@ -23,6 +23,16 @@ const tripSchema = new Schema(
             required: true,
             trim: true,
         },
+        flight: {
+            type: String,
+            required: true,
+            trim: true,
+        },
+        hotel: {
+            type: String,
+            required: true,
+            trim: true,
+        },
         guests: {
             type: Number,
             required: true,

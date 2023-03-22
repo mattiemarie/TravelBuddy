@@ -4,6 +4,8 @@
       "location": "Los Angelas",
       "startDate": "2022-05-01",
       "endDate": "2022-05-06",
+      "flight": "American Airlines",
+      "hotel":"",
       "guests": 4,
       "budget": 2100.00,
       "tripCost":1825.49
@@ -13,6 +15,8 @@
       "location": "New Jersey",
       "startDate": "2022-06-29",
       "endDate": "2022-07-01",
+      "flight": "American Airlines",
+      "hotel":"",
       "guests": 2,
       "budget": 1500.00,
       "tripCost":1427.82
