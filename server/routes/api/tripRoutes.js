@@ -5,7 +5,7 @@ const {
     getTripById,
     updateTripById,
     deleteTripById,
-} = require('../controllers/tripController');
+} = require('../../controllers/tripController');
 
 const router = express.Router();
 

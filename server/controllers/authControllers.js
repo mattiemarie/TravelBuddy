@@ -10,9 +10,11 @@ const register = async (req, res) => {
 
         // Create a new user
         const user = new User({
-        username: req.body.username,
-        email: req.body.email,
-        password: hashedPassword,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            username: req.body.username,
+            email: req.body.email,
+            password: hashedPassword,
         });
 
         // Save the user to the database

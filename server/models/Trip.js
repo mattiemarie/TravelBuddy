@@ -14,12 +14,12 @@ const tripSchema = new Schema(
             trim: true,
         },
         startDate: {
-            type: String,
+            type: Date,
             required: true,
             trim: true,
         },
         endDate: {
-            type: String,
+            type: Date,
             required: true,
             trim: true,
         },
@@ -38,6 +38,6 @@ const tripSchema = new Schema(
     }
 )
 
-const Trip = model('trip', tripSchema);
+const Trip = model('Trip', tripSchema);
 
 module.exports = Trip;

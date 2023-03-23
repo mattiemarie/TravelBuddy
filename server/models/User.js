@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose');
 //Schema to create User Model
 const userSchema = new Schema(
     {
-        first_tname: {
+        first_name: {
             type: String,
             required: true,
             max_length: 50,
@@ -13,17 +13,17 @@ const userSchema = new Schema(
             required: true,
             max_length: 50,
         },
-        email: {
-            type: String,
-            required: true,
-            unique: true,
-            match: [/.+@.+\..+/]
-        },
         username: {
             type: String,
             unique: true,
             trim: true,
             required: 'Username is Required'
+        },
+        email: {
+            type: String,
+            required: true,
+            unique: true,
+            match: [/.+@.+\..+/]
         },
         password: {
             type: String,
@@ -34,6 +34,6 @@ const userSchema = new Schema(
     }
 )
 
-const User = model('user', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;

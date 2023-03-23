@@ -30,7 +30,7 @@ const getUserById = async (req, res) => {
 
 // CREATE a new user
 const createUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { first_name, last_name, username, email, password } = req.body;
   try {
     let user = await User.findOne({ email });
     if (user) {
@@ -39,7 +39,9 @@ const createUser = async (req, res) => {
         .json({ errors: [{ msg: 'User already exists' }] });
     }
     user = new User({
-      name,
+      first_name,
+      last_name,
+      username,
       email,
       password,
     });
@@ -53,11 +55,13 @@ const createUser = async (req, res) => {
 
 // UPDATE an existing user
 const updateUser = async (req, res) => {
-  const { name, email, password } = req.body;
-  const userFields = {};
-  if (name) userFields.name = name;
-  if (email) userFields.email = email;
-  if (password) userFields.password = password;
+  const { first_name, last_name, username, email, password } = req.body;
+    const userFields = {};
+    if (first_name) userFields.first_name = first_name;
+    if (last_name) userFields.last_name = last_name;
+    if (username) userFields.username = username;
+    if (email) userFields.email = email;
+    if (password) userFields.password = password;
   try {
     let user = await User.findById(req.params.id);
     if (!user) {
