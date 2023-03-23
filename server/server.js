@@ -13,6 +13,9 @@ const db = require("./config/connection");
 
 // const routes = require('./routes');
 
+//Route for STRIPE
+const striperoutes = require('./routes/api/stripe-route');
+
 //express server
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,6 +24,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 //apollo server
 const server = new ApolloServer({

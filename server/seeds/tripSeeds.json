@@ -2,24 +2,24 @@
     {
       "title": "West Coast Trip",
       "location": "Los Angelas",
+      "startDate": "2022-05-01",
+      "endDate": "2022-05-06",
+      "flight": "American Airlines",
+      "hotel":"",
       "guests": 4,
-      "startdate": "2022-05-01",
-      "enddate": "2022-05-06",
-      "airline":"American Airlines",
-      "hotel": "",
       "budget": 2100.00,
-      "tripcost":1825.49
+      "tripCost":1825.49
     },
     {
       "title": "East Coast Trip",
       "location": "New Jersey",
+      "startDate": "2022-06-29",
+      "endDate": "2022-07-01",
+      "flight": "SouthWest",
+      "hotel":"",
       "guests": 2,
-      "startdate": "2022-06-29",
-      "enddate": "2022-07-01",
-      "airline":"Southwest",
-      "hotel": "",
       "budget": 1500.00,
-      "tripcost":1427.82
+      "tripCost":1427.82
     }
   ]
   
