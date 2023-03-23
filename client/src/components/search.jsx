@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import "./Search.css";
+import "./search.css";
 import "react-date-range/dist/styles.css"; // Main style file
 import "react-date-range/dist/theme/default.css"; // Theme css file
 import { DateRangePicker } from "react-date-range";
 import PeopleIcon from "@material-ui/icons/People";
 import { Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 function Search() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
@@ -32,7 +31,7 @@ function Search() {
         <PeopleIcon />
         <input min={0} defaultValue={2} type="number" />
       </h2>
-      <Button onClick={() => history.push("/search")}>
+      <Button onClick={() => navigate("/search")}>
         Search 
       </Button>
     </div>

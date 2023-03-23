@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./footer.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Avatar } from "@material-ui/core";
@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <img className="header__icon" src="./possiblelogo2.png;" />
+        <img className="header__icon" src="../possiblelogo2.png" />
       </Link>
       <div className="header__center">
         <input type="text" />

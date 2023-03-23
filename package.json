@@ -19,16 +19,16 @@
     "license": "ISC",
     "dependencies": {
         "@apollo/react-hooks": "^4.0.0",
-        "@emotion/react": "^11.10.6",
-        "@emotion/styled": "^11.10.6",
-        "@fontsource/roboto": "^4.5.8",
-        "@mui/icons-material": "^5.11.11",
-        "@mui/material": "^5.11.13",
-        "@mui/styled-engine-sc": "^5.11.11",
+        "@emotion/react": "^11.5.0",
+        "@emotion/styled": "^11.5.0",
+        "@fontsource/roboto": "^4.5.9",
+        "@mui/icons-material": "^5.2.5",
+        "@mui/material": "^5.2.5",
+        "@mui/styled-engine-sc": "^5.2.5",
         "apollo-server-express": "^2.19.2",
         "if-env": "^1.0.4",
-        "react-router-dom": "^6.9.0",
-        "styled-components": "^5.3.9"
+        "react-router-dom": "^6.2.1",
+        "styled-components": "^5.3.3"
     },
     "devDependencies": {
         "concurrently": "^5.2.0"
