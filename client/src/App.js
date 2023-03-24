@@ -5,7 +5,7 @@ import Stripe from "react-stripe-checkout";
 import FaceIcon from "@mui/icons-material/Face";
 import AirplaneTicketIcon from "@mui/icons-material/AirplaneTicket";
 import { Chip, createTheme, ThemeProvider } from "@material-ui/core";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Results from "./components/results";
@@ -70,14 +70,13 @@ function App() {
             />
           </div>
           <div className="search">
-          <BrowserRouter  basename={process.env.PUBLIC_URL}>
-            <Routes>
-              <Route path="/" element={<Search />} />
-              <Route path="/results" element={<Results />} />
-            </Routes>
-          </BrowserRouter>
-        </div>
-
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Search />} />
+                <Route path="/results" element={<Results />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
         </div>
         <Footer />
       </div>
