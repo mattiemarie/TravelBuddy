@@ -3,15 +3,15 @@ import "./footer.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Avatar } from "@material-ui/core";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 function Header() {
   return (
     <div className="header">
-      <Link to="/">
+      <a href="/">
         <img className="header__icon" src="../possiblelogo2.png" />
-      </Link>
+      </a>
       <div className="header__center">
         <input type="text" />
         <SearchIcon />

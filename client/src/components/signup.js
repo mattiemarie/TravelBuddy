@@ -144,7 +144,6 @@ export default function Login() {
       <div style={{ marginTop: "30px" }}>
         <TextField
           label="Email Address"
-          fullWidth
           error={emailError}
           id="standard-basic"
           variant="standard"
@@ -193,7 +192,7 @@ export default function Login() {
       <div style={{ marginTop: "10px" }}>
   <Button
     variant="contained"
-    fullWidth="10px"
+    width="10px"
     startIcon={<LoginIcon />}
     onClick={handleSubmit}
     style={{ backgroundColor: '#5ce1e6' ,color: '#2a3938' }}
