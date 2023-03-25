@@ -9,6 +9,7 @@ import {
   IconButton,
   Button,
   Input,
+  Checkbox,
   Alert,
   Stack,
 } from "@mui/material";
@@ -144,6 +145,7 @@ export default function Login() {
       <div style={{ marginTop: "30px" }}>
         <TextField
           label="Email Address"
+          fullWidth={true}
           error={emailError}
           id="standard-basic"
           variant="standard"
@@ -190,16 +192,16 @@ export default function Login() {
       </div>
 
       <div style={{ marginTop: "10px" }}>
-  <Button
-    variant="contained"
-    width="10px"
-    startIcon={<LoginIcon />}
-    onClick={handleSubmit}
-    style={{ backgroundColor: '#5ce1e6' ,color: '#2a3938' }}
-  >
-    LOGIN
-  </Button>
-</div>
+        <Button
+          variant="contained"
+          fullWidth={true}
+          startIcon={<LoginIcon />}
+          onClick={handleSubmit}
+          style={{ backgroundColor: "#5ce1e6", color: "#2a3938" }}
+        >
+          LOGIN
+        </Button>
+      </div>
       {/* Show Form Error if any */}
       {formValid && (
         <Stack sx={{ width: "100%", paddingTop: "10px" }} spacing={2}>
@@ -219,11 +221,16 @@ export default function Login() {
       )}
 
       <div style={{ marginTop: "7px", fontSize: "15px" }} margin="left">
-      
         <br />
         Do you have an account ?{" "}
-        <small style={{ color: "#5ce1e6", fontSize: "15px"  }}>
-        Click The Switch Above To Sign Up
+        <small
+          style={{
+            textDecoration: "underline",
+            color: "#5ce1e6",
+            fontSize: "15px",
+          }}
+        >
+          Click The Switch To Sign Up
         </small>
       </div>
     </div>

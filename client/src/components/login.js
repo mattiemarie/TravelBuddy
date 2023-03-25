@@ -107,7 +107,7 @@ export default function Login() {
       <div style={{ marginTop: "200px" }}>
         <TextField
           label="Email Address"
-          width
+          fullWidth
           error={emailError}
           id="standard-basic"
           variant="standard"
@@ -163,15 +163,16 @@ export default function Login() {
       </div>
 
       <div style={{ marginTop: "10px" }}>
-        <Button
-          variant="contained"
-          width="15px"
-          startIcon={<LoginIcon />}
-          onClick={handleSubmit}
-          style={{ backgroundColor: "#5ce1e6", color: "#2a3938" }}
-        >
-          LOGIN
-        </Button>
+      <Button
+  variant="contained"
+  fullWidth={true}
+  startIcon={<LoginIcon />}
+  onClick={handleSubmit}
+  style={{ backgroundColor: '#5ce1e6', color: '#2a3938' }}
+>
+  LOGIN
+</Button>
+
       </div>
 
       {/* Show Form Error if any */}
@@ -197,11 +198,12 @@ export default function Login() {
         Do you have an account ?{" "}
         <small
           style={{
+            textDecoration: "underline",
             color: "#5ce1e6",
             fontSize: "15px",
           }}
         >
-          Click The Switch Above To Sign Up
+          Click The Switch To Sign Up
         </small>
       </div>
     </div>
