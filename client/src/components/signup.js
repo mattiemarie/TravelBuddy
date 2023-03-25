@@ -9,7 +9,6 @@ import {
   IconButton,
   Button,
   Input,
-  Checkbox,
   Alert,
   Stack,
 } from "@mui/material";
@@ -47,9 +46,6 @@ export default function Login() {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
-
-  // Label for Checkbox
-  const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
   // Validation for onBlur Username
   const handleUsername = () => {
