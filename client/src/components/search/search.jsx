@@ -7,31 +7,23 @@ import PeopleIcon from "@material-ui/icons/People";
 import { Button } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 
-function Search() {
-  const navigate = useNavigate();
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-
+function Search({startDate,endDate, requesting, onSearchChange, onSubmit}) {
+  
   const selectionRange = {
     startDate: startDate,
     endDate: endDate,
     key: "selection",
   };
-
-  function handleSelect(ranges) {
-    setStartDate(ranges.selection.startDate);
-    setEndDate(ranges.selection.endDate);
-  }
-
+  console.log(selectionRange);
   return (
     <div className="search">
-      <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
+      <DateRangePicker ranges={[selectionRange]} onChange={(ranges) => onSearchChange(ranges)} />
       <h2>
         Number of Guests
         <PeopleIcon />
         <input min={0} defaultValue={2} type="number" />
       </h2>
-      <Button onClick={() => navigate("/search")}>
+      <Button onClick={onSubmit} disabled={requesting}>
         Search 
       </Button>
     </div>

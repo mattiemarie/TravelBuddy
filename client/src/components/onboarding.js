@@ -1,11 +1,11 @@
 import "../App.css";
-import React from "react";
+import React, {useState } from "react";
 import FaceIcon from "@mui/icons-material/Face";
 import AirplaneTicketIcon from "@mui/icons-material/AirplaneTicket";
 import { Chip, Switch, createTheme, ThemeProvider } from "@material-ui/core";
-import { useCheckedState } from "./hooks/usedCheckedState";
 import Login from "./login";
 import Signup from "./signup";
+
 
 const theme = createTheme({
   palette: {
@@ -15,19 +15,10 @@ const theme = createTheme({
   },
 });
 
-function SwitchForm() {
-  const [checked, handleChange] = useCheckedState(false);
-
+function Onboarding() {
+  const [mode, setMode] = useState("createAccount");
+  const handleModeChange = (newMode) => setMode(newMode)
   return (
-    <div
-      className="App"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
       <div
         style={{
           width: "600px",
@@ -35,7 +26,7 @@ function SwitchForm() {
           paddingBottom: "50px",
         }}
       >
-        <div
+        {/* <div
           style={{
             content: '""',
             backgroundImage: 'url(".//possiblelogo2.png")',
@@ -49,8 +40,8 @@ function SwitchForm() {
             height: "100%",
             zIndex: -1,
           }}
-        />
-        <div align="center">
+        /> */}
+        {/* <div align="center">
           {checked ? (
             <Chip
               icon={<AirplaneTicketIcon />}
@@ -66,9 +57,9 @@ function SwitchForm() {
               color="default"
             />
           )}
-          <br />
+          <br /> */}
 
-          <ThemeProvider theme={theme}>
+          {/* <ThemeProvider theme={theme}>
             <div className="App" style={{ marginTop: "20px" }}>
               <Switch
                 checked={checked}
@@ -77,13 +68,12 @@ function SwitchForm() {
                 color="primary"
               />
             </div>
-          </ThemeProvider>
-        </div>
-
-        {checked ? <Login /> : <Signup />}
-      </div>
-    </div>
+          </ThemeProvider> */}
+    
+        {mode === "createAccount" ? <Signup onModeChange={handleModeChange}/> : <Login onModeChange={handleModeChange} />}
+       
+     </div>
   );
 }
 
-export default SwitchForm;
+export default Onboarding;

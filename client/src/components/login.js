@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from 'react-router-dom'
 // Material UI Imports
 import {
   TextField,
@@ -23,7 +23,8 @@ import LoginIcon from "@mui/icons-material/Login";
 const isEmail = (email) =>
   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 
-export default function Login() {
+export default function Login({onModeChange}) {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = React.useState(false);
 
   //Inputs
@@ -99,7 +100,8 @@ export default function Login() {
     console.log("Remember : " + rememberMe);
 
     //Show Successfull Submittion
-    setSuccess("Form Submitted Successfully");
+    navigate("/dashboard");
+
   };
 
   return (
@@ -196,6 +198,8 @@ export default function Login() {
       <div style={{ marginTop: "7px", fontSize: "15px" }} margin="left">
         <br></br>
         Do you have an account ?{" "}
+        <button type="button" onClick={() =>
+        onModeChange("createAccount")}>
         <small
           style={{
             textDecoration: "underline",
@@ -203,9 +207,10 @@ export default function Login() {
             fontSize: "15px",
           }}
         >
-          Click The Switch To Sign Up
+          Click Here To Sign Up
         </small>
-      </div>
+      </button>
+    </div>
     </div>
   );
 }
