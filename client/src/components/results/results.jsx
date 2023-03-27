@@ -17,14 +17,14 @@ function Results({
         <ul>
         {
           searchData.map((result) => {
-            // const {
-            //   img,
-            //   location,
-            //   title,
-            //   description,
-            //   star,
-            //   price,
-            //   total} = result; 
+            const {
+              img,
+              location,
+              title,
+              description,
+              star,
+              price,
+              total} = result; 
             console.log("result")
 
             // TODO: refactor this to use the trip data
