@@ -3,20 +3,23 @@ const {
     createUser,
     getAllUsers,
     getUserById,
-    updateUserById,
-    deleteUserById,
-} = require('../controllers/userController');
+    updateUser,
+    deleteUser,
+} = require('../../controllers/userController');
 
 const router = express.Router();
 
 // Routes for /api/users
-router.route('/').get(getAllUsers).post(createUser);
+router.route('/').get(getAllUsers)
 
-// Routes for /api/users/:id
+// Route to create new users
+router.route('/new').post(createUser);
+
+// Routes for /api/user/:id
 router
     .route('/:id')
     .get(getUserById)
-    .put(updateUserById)
-    .delete(deleteUserById);
+    .put(updateUser)
+    .delete(deleteUser);
 
 module.exports = router;

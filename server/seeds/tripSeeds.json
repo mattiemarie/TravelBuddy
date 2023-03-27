@@ -8,7 +8,7 @@
       "hotel":"",
       "guests": 4,
       "budget": 2100.00,
-      "tripCost":1825.49
+      "tripCost": 1825.49
     },
     {
       "title": "East Coast Trip",
@@ -19,7 +19,7 @@
       "hotel":"",
       "guests": 2,
       "budget": 1500.00,
-      "tripCost":1427.82
+      "tripCost": 1427.82
     }
   ]
   

@@ -7,7 +7,7 @@ const resolvers = {
         me: async (parent, args, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
-                .select('-__v -password')
+                .select('password')
                 return userData;
             }
             throw new AuthenticationError('Not logged in');
@@ -34,8 +34,8 @@ const resolvers = {
         },
         saveTrip: async (parent, { trip }, context) => {
             if (context.user) {
-                const updatedUser = await User.findOneAndUpdate(
-                    { _id: context.user._id },
+                const updatedUser = await Trip.findOneAndUpdate(
+                    { _id: context.trip._id },
                     { $addToSet: {savedTrips: trip} },
                     { new: true }
                 )
@@ -45,8 +45,8 @@ const resolvers = {
             },
             removeTrip: async (parent, { tripId }, context) => {
                 if (context.user) {
-                    const updatedUser = await User.findOneAndUpdate(
-                        {_id: context.user._id},
+                    const updatedUser = await Trip.findOneAndUpdate(
+                        {_id: context.trip._id},
                         { $pull: { savedTrip: { tripId: tripId } } },
                         { new: true }
                     )

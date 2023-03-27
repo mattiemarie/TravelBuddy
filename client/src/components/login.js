@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from 'react-router-dom'
 // Material UI Imports
 import {
   TextField,
@@ -9,6 +9,7 @@ import {
   IconButton,
   Button,
   Input,
+  Checkbox,
   Alert,
   Stack,
 } from "@mui/material";
@@ -18,22 +19,20 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import LoginIcon from "@mui/icons-material/Login";
 
-// Validations
-
 // Email Validation
 const isEmail = (email) =>
   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 
-export default function SignUp({onModeChange}) {
+export default function Login({onModeChange}) {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = React.useState(false);
 
   //Inputs
-  const [usernameInput, setUsernameInput] = useState();
   const [emailInput, setEmailInput] = useState();
   const [passwordInput, setPasswordInput] = useState();
+  const [rememberMe, setRememberMe] = useState();
 
   // Inputs Errors
-  const [usernameError, setUsernameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
@@ -47,15 +46,8 @@ export default function SignUp({onModeChange}) {
     event.preventDefault();
   };
 
-  // Validation for onBlur Username
-  const handleUsername = () => {
-    if (!usernameInput) {
-      setUsernameError(true);
-      return;
-    }
-
-    setUsernameError(false);
-  };
+  // Label for Checkbox
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
   // Validation for onBlur Email
   const handleEmail = () => {
@@ -87,14 +79,6 @@ export default function SignUp({onModeChange}) {
     setSuccess(null);
     //First of all Check for Errors
 
-    // IF username error is true
-    if (usernameError || !usernameInput) {
-      setFormValid(
-        "Username is set btw 5 - 15 characters long. Please Re-Enter"
-      );
-      return;
-    }
-
     // If Email error is true
     if (emailError || !emailInput) {
       setFormValid("Email is Invalid. Please Re-Enter");
@@ -111,37 +95,21 @@ export default function SignUp({onModeChange}) {
     setFormValid(null);
 
     // Proceed to use the information passed
-    console.log("Username : " + usernameInput);
     console.log("Email : " + emailInput);
     console.log("Password : " + passwordInput);
+    console.log("Remember : " + rememberMe);
 
     //Show Successfull Submittion
-    setSuccess("Form Submitted Successfully");
+    navigate("/dashboard");
+
   };
 
   return (
     <div>
       <div style={{ marginTop: "200px" }}>
         <TextField
-          error={usernameError}
-          label="Username"
-          id="standard-basic"
-          variant="standard"
-          sx={{ width: "100%" }}
-          size="small"
-          value={usernameInput}
-          InputProps={{}}
-          onChange={(event) => {
-            setUsernameInput(event.target.value);
-          }}
-          onBlur={handleUsername}
-        />
-      </div>
-
-      <div style={{ marginTop: "30px" }}>
-        <TextField
           label="Email Address"
-          fullWidth={true}
+          fullWidth
           error={emailError}
           id="standard-basic"
           variant="standard"
@@ -155,7 +123,7 @@ export default function SignUp({onModeChange}) {
           }}
         />
       </div>
-      <div style={{ marginTop: "20px" }}>
+      <div style={{ marginTop: "30px" }}>
         <FormControl sx={{ width: "100%" }} variant="standard">
           <InputLabel
             error={passwordError}
@@ -187,17 +155,28 @@ export default function SignUp({onModeChange}) {
         </FormControl>
       </div>
 
-      <div style={{ marginTop: "10px" }}>
-        <Button
-          variant="contained"
-          fullWidth={true}
-          startIcon={<LoginIcon />}
-          onClick={handleSubmit}
-          style={{ backgroundColor: "#5ce1e6", color: "#2a3938" }}
-        >
-          LOGIN
-        </Button>
+      <div style={{ fontSize: "10px" }}>
+        <Checkbox
+          {...label}
+          size="small"
+          onChange={(event) => setRememberMe(event.target.checked)}
+        />
+        Remember Me
       </div>
+
+      <div style={{ marginTop: "10px" }}>
+      <Button
+  variant="contained"
+  fullWidth={true}
+  startIcon={<LoginIcon />}
+  onClick={handleSubmit}
+  style={{ backgroundColor: '#5ce1e6', color: '#2a3938' }}
+>
+  LOGIN
+</Button>
+
+      </div>
+
       {/* Show Form Error if any */}
       {formValid && (
         <Stack sx={{ width: "100%", paddingTop: "10px" }} spacing={2}>
@@ -217,21 +196,21 @@ export default function SignUp({onModeChange}) {
       )}
 
       <div style={{ marginTop: "7px", fontSize: "15px" }} margin="left">
-        <br />
+        <br></br>
         Do you have an account ?{" "}
         <button type="button" onClick={() =>
-        onModeChange("login")}>
-          <small
-            style={{
-              textDecoration: "underline",
-              color: "#5ce1e6",
-              fontSize: "15px",
-            }}
-          >
-            Click Here to Login 
-          </small>
-        </button>
-      </div>
+        onModeChange("createAccount")}>
+        <small
+          style={{
+            textDecoration: "underline",
+            color: "#5ce1e6",
+            fontSize: "15px",
+          }}
+        >
+          Click Here To Sign Up
+        </small>
+      </button>
+    </div>
     </div>
   );
 }

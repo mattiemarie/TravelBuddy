@@ -1,15 +1,16 @@
 [
-    { "first_name": "Jason",
+    { 
+      "first_name": "Jason",
       "last_name": "Yarger",
-      "email": "gil23@hotmail.com",
       "username":"jyarger",
+      "email": "gil23@hotmail.com",
       "password": "caliboy22"
     },
-    { "first_name": "Brian",
+    { 
+      "first_name": "Brian",
       "last_name": "Sella",
-      "email": "mrgreenside23@gmail.com",
       "username":"bsella",
+      "email": "mrgreenside23@gmail.com",
       "password": "uhhuh234"
-  
     }
   ]
