@@ -18,7 +18,7 @@ const db = require("./config/connection");
 
 //express server
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 //needed for STRIPE
 app.use(cors());

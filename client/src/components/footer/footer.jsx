@@ -4,7 +4,7 @@ import "../footer/footer.css";
 function Footer() {
   return (
     <div className="footer">
-      <p>Privacy · Terms · Sitemap · Company Details</p>
+      <p>·Group5 · Project 3 · TravelBuddy ·</p>
     </div>
   );
 }

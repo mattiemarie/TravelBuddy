@@ -1,6 +1,13 @@
+
 .App {
   text-align: center;
 }
+body {
+  background-image: url("https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #28c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

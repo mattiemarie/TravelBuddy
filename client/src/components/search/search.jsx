@@ -16,16 +16,18 @@ function Search({startDate,endDate, requesting, onSearchChange, onSubmit}) {
   };
   console.log(selectionRange);
   return (
-    <div className="search">
-      <DateRangePicker ranges={[selectionRange]} onChange={(ranges) => onSearchChange(ranges)} />
-      <h2>
-        Number of Guests
-        <PeopleIcon />
-        <input min={0} defaultValue={2} type="number" />
-      </h2>
-      <Button onClick={onSubmit} disabled={requesting}>
-        Search 
-      </Button>
+    <div className="search-container">
+      <div className="search">
+        <DateRangePicker ranges={[selectionRange]} onChange={(ranges) => onSearchChange(ranges)} />
+        <h2>
+          Number of Guests
+          <PeopleIcon />
+          <input min={0} defaultValue={2} type="number" />
+        </h2>
+        <Button onClick={onSubmit} disabled={requesting}>
+          Search 
+        </Button>
+      </div>
     </div>
   );
 }

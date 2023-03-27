@@ -6,11 +6,13 @@ import Results from "./components/results/results";
 import Search from "./components/search/search";
 import Onboarding from './components/onboarding';
 
+
 function App({children}) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
+  
   };
 
   return (
