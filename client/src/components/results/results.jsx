@@ -16,6 +16,7 @@ function Results({
       ) : (
         <ul>
         {
+          
           searchData.map((result) => {
             const {
               img,
@@ -25,21 +26,25 @@ function Results({
               star,
               price,
               total} = result; 
-            console.log("result")
+            
 
             // TODO: refactor this to use the trip data
             return (
-              <li key={result.id}>
+              <li key={result._id}>
                 <span>
                   {result.title}
                  </span>
                  <p>
-                  {result.body}
+                  {result.location}
+                 </p>
+                 <p>
+                  {result.tripCost}
                  </p>
               </li>
             )
           })
         }
+        {console.log("result", searchData)}
         </ul>
       ) } 
       
