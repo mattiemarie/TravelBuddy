@@ -11,7 +11,12 @@
 .searchResult:hover {
     opacity: 0.8;
 }
-
+.trips-result{
+    display: block;
+    position: relative;
+    bottom: 271px;
+    color: white;
+}
 .searchResult > img {
     height: 200px;
     width: 350px;

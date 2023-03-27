@@ -6,11 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 1000px;
   padding: 30px;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.3);
-   border-radius: 35;
+  border-radius: 35;
 }
 
 .search > h2 {

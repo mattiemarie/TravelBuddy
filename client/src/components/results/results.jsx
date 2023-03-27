@@ -8,7 +8,7 @@ function Results({
   requesting=false
 }) {
   return (
-    <div>
+    <div className="trips-result">
       {requesting ? (
         <p>
           ... loading
@@ -30,6 +30,7 @@ function Results({
 
             // TODO: refactor this to use the trip data
             return (
+              
               <li key={result._id}>
                 <span>
                   {result.title}
@@ -46,6 +47,7 @@ function Results({
         }
         {console.log("result", searchData)}
         </ul>
+
       ) } 
       
       </div>
