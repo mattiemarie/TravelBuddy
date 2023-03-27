@@ -5,10 +5,10 @@ import axios from "axios"
 
 
 function Dashboard() {
- const [startDate, setStartDate] = useState(new Date());
- const [endDate, setEndDate] = useState(new Date());
-const [searchData, setSearchData] = useState([]);
-const [requesting, setRequesting] = useState(false);
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const [searchData, setSearchData] = useState([]);
+  const [requesting, setRequesting] = useState(false);
 
     const handleSearchChange = (ranges) => {
     setStartDate(ranges.selection.startDate);

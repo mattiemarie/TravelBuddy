@@ -21,7 +21,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 //needed for STRIPE
-app.use(cors());
+
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -39,6 +39,7 @@ server.start().then(() => {
         server.applyMiddleware({ app });
 
         //middleware parsing
+        app.use(cors());
         app.use(express.urlencoded({ extended: true }));
         app.use(express.json());
         app.use('/', api);
