@@ -24,7 +24,7 @@ import LoginIcon from "@mui/icons-material/Login";
 const isEmail = (email) =>
   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 
-export default function Login() {
+export default function SignUp({onModeChange}) {
   const [showPassword, setShowPassword] = React.useState(false);
 
   //Inputs
@@ -219,15 +219,18 @@ export default function Login() {
       <div style={{ marginTop: "7px", fontSize: "15px" }} margin="left">
         <br />
         Do you have an account ?{" "}
-        <small
-          style={{
-            textDecoration: "underline",
-            color: "#5ce1e6",
-            fontSize: "15px",
-          }}
-        >
-          Click The Switch To Sign Up
-        </small>
+        <button type="button" onClick={() =>
+        onModeChange("login")}>
+          <small
+            style={{
+              textDecoration: "underline",
+              color: "#5ce1e6",
+              fontSize: "15px",
+            }}
+          >
+            Click Here to Login 
+          </small>
+        </button>
       </div>
     </div>
   );

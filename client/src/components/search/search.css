@@ -1,8 +1,5 @@
 .search {
-    position: absolute;
-    top: 35px;
-    left: 25%;
-    width: 100vw;
+    width: 100%;
 }
 
 .search > h2 {
@@ -12,9 +9,6 @@
     width: 559px;
     padding: 10px;
     background-color: white;
-    position: absolute;
-    left: 0;
-    top: 340px;
 }
 
 .search > input:focus {
@@ -22,13 +16,10 @@
 }
 
 .search > button {
-    position: absolute;
-    left: 0;
-    top: 390px;
-    text-transform: inherit !important;
     background-color: #5ce1e6;
     color: #408b8e;
-    width: 579px;
+    width: 200px;
+    margin-left: auto;
     border-radius: 0;
 }
 

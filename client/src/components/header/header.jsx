@@ -12,14 +12,6 @@ function Header() {
       <a href="/">
         <img className="header__icon" src="../possiblelogo2.png" alt="logo"/>
       </a>
-      <div className="header__center">
-        <input type="text" />
-        <SearchIcon />
-      </div>
-      <div className="header__right">
-        <ShoppingCartIcon />
-        <Avatar />
-      </div>
     </div>
   );
 }
