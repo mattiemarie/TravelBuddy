@@ -3,14 +3,14 @@
     align-items: center;
     justify-content: space-between;
     position: sticky;
-    background-color: #ffffff;
+background-color: rgba(255, 255, 255, 0.3); /* 50% opacity */
     z-index: 100;
     width: 100%;
 }
 
 .header__icon {
     object-fit: contain;
-    height: 100px;
+    height: 155px;
     margin-left: 20px;
 }
 

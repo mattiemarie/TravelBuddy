@@ -4,6 +4,8 @@ import Onboarding from "./components/onboarding";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from "./components/dashboard.jsx";
 import App from "./App";
+import './App.css';
+
 
 
 ReactDOM.render(
