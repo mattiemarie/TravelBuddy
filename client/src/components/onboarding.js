@@ -31,7 +31,7 @@ function Onboarding() {
       <div
         style={{
           content: '""',
-          backgroundImage: 'url(".//logo.png")',
+          backgroundImage: 'url("../logo.png")',
           backgroundSize: "550px 400px",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
