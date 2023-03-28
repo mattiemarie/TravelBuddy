@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const tripSeeds = require("./tripSeeds.json");
 const userSeeds = require("./userSeeds.json");
+const url = 'mongodb://localhost/travelBuddy';
 
-mongoose.connect("mongodb://localhost/travelBuddy");
+mongoose.connect(process.env.MONGODB_URI || url)
 
 const User = mongoose.model("User", {
     first_name: String,
