@@ -35,7 +35,8 @@ THEN I am prompted to checkout and enjoy my personalized vacation
 
 The following link shows a demo of Travel Buddy's appearance and functionality:
 
-[Link will go here]
+https://travel-buddy01.herokuapp.com/
+
 
 
 ## Description
